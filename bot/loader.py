@@ -11,7 +11,6 @@ logger = logging.getLogger(__name__)
 
 
 def parse_date(date_str):
-    """Преобразует строку в datetime объект"""
     if not date_str:
         return None
     try:
@@ -43,7 +42,7 @@ async def load_data():
             logger.error("Файл с данными не найден")
             return
 
-        with open('videos.json', 'r', encoding='utf-8') as f:
+        with open('bot/videos.json', 'r', encoding='utf-8') as f:
             data = json.load(f)
 
         videos_data = []
